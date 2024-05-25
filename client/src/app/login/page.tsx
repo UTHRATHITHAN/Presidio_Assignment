@@ -91,7 +91,7 @@ export default function Login() {
     return (
         <main>
             <nav className="absolute w-full top-0 h-14 flex px-10 justify-between items-center">
-                <p>Logo</p>
+                <p>Rentify</p>
                 <div className="flex gap-x-5">
                     <Link href="/">  <span>Home</span></Link>
                     <Link href="/register">  <span>Register</span></Link>

@@ -92,7 +92,7 @@ export default function Register() {
     return (
         <main>
             <nav className="absolute w-full top-0 h-14 flex px-10 justify-between items-center">
-                <p>Logo</p>
+                <p>Rentify</p>
                 <div className="flex gap-x-5">
                     <Link href="/">  <span>Home</span></Link>
                     <Link href="/login">  <span>Login</span></Link>
