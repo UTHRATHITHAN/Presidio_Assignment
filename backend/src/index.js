@@ -27,7 +27,11 @@ app.use(express.json())
 app.use(cors({ origin: process.env.ORIGIN, credentials: true }))
 app.use(urlencoded({ extended: true }))
 app.use(cookieParser())
-
+app.use(function(req, res, next) {
+    res.header('Access-Control-Allow-Origin', '*');
+    res.header('Access-Control-Allow-Headers', 'Origin, X-Requested-With, Content-Type, Accept');
+    next();
+  });
 app.post("/register", async (req, res) => {
     const formData = req.body;
     console.log(formData);
