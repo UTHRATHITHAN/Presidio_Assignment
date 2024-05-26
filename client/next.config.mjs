@@ -2,13 +2,13 @@
 
 const nextConfig = {
     env: {
-        NEXT_PUBLIC_BACKEND_URL: "https://presidio-assignment-a2d6.vercel.app"
+        NEXT_PUBLIC_BACKEND_URL: "https://presidiobackendassignment-production.up.railway.app"
     },
     async headers() {
         return [
             {
                 // matching all API routes
-                source: "/api/:path*",
+                source: "/:path*",
                 headers: [
                     { key: "Access-Control-Allow-Credentials", value: "true" },
                     { key: "Access-Control-Allow-Origin", value: "*" }, // replace this your actual origin

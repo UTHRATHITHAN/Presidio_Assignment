@@ -1,6 +1,6 @@
 import express, { urlencoded } from 'express'
-import dotenv from 'dotenv'
-dotenv.config();
+// import dotenv from 'dotenv'
+// dotenv.config();
 import cookieParser from 'cookie-parser';
 import nodemailer from 'nodemailer'
 import cors from 'cors'
@@ -8,21 +8,24 @@ import { generateToken } from './utils/generateToken.js'
 import { PrismaClient } from '@prisma/client'
 import { verifyToken } from './middleware/verifyToken.js'
 const prisma = new PrismaClient()
+const app = express();
 
-
- const app = express();
+app.use(cors({
+    origin:process.env.ORIGIN,
+    credentials: true
+}))
 app.use(express.json())
-// app.use(cors({ origin: process.env.ORIGIN, credentials: true }))
-app.use(cors({ origin: "*", credentials: true }))
+
+
 app.use(urlencoded({ extended: true }))
 app.use(cookieParser())
 
-  app.options("/*", function(req, res, next){
-    res.header('Access-Control-Allow-Origin', '*');
-    res.header('Access-Control-Allow-Methods', 'GET,PUT,POST,DELETE,PATCH,OPTIONS');
-    res.header('Access-Control-Allow-Headers', 'Content-Type, Authorization, Content-Length, X-Requested-With');
-    res.send(200);
-  });
+//   app.options("/*", function(req, res, next){
+//     res.header('Access-Control-Allow-Origin', '*');
+//     res.header('Access-Control-Allow-Methods', 'GET,PUT,POST,DELETE,PATCH,OPTIONS');
+//     res.header('Access-Control-Allow-Headers', 'Content-Type, Authorization, Content-Length, X-Requested-With');
+//     res.send(200);
+//   });
 app.post("/register", async (req, res) => {
     const formData = req.body;
     console.log(formData);
@@ -99,6 +102,7 @@ app.post('/login', async (req, res) => {
 })
 
 app.get("/", verifyToken, (req, res) => {
+    console.log("Its working");
     res.json({
         status: "failure",
         message: "Session Expired, Please Login",
@@ -107,6 +111,8 @@ app.get("/", verifyToken, (req, res) => {
 })
 
 app.get("/info", (req, res) => {
+    console.log("Its working");
+
     res.json({
         info: "API is live"
     })
@@ -356,7 +362,7 @@ console.log("seller");
 })
 
 // const PORT = process.env.PORT || 8001 || 8002;
-const PORT = 8000;
+const PORT = process.env.PORT || 8000;
 
 app.listen(PORT, () => {
     console.log(`Server is running on port : ${PORT}`);
