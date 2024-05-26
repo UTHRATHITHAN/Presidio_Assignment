@@ -9,18 +9,6 @@ import { PrismaClient } from '@prisma/client'
 import { verifyToken } from './middleware/verifyToken.js'
 const prisma = new PrismaClient()
 
-// const prisma = new PrismaClient().$extends({
-//     result:{
-//       like:{
-//         likeCounts:{
-//             needs:{likes:true},
-//             compute(like){
-//                 return `${like.likes.length}`
-//             }
-//         }
-//       }
-//     }
-// })
 
  const app = express();
 app.use(express.json())
