@@ -22,7 +22,7 @@ const prisma = new PrismaClient()
 //     }
 // })
 
-const app = express();
+ const app = express();
 app.use(express.json())
 app.use(cors({ origin: process.env.ORIGIN, credentials: true }))
 app.use(urlencoded({ extended: true }))
@@ -372,3 +372,5 @@ const PORT = 8000;
 app.listen(PORT, () => {
     console.log(`Server is running on port : ${PORT}`);
 })
+
+export default app;
