@@ -24,7 +24,8 @@ const prisma = new PrismaClient()
 
  const app = express();
 app.use(express.json())
-app.use(cors({ origin: process.env.ORIGIN, credentials: true }))
+// app.use(cors({ origin: process.env.ORIGIN, credentials: true }))
+app.use(cors({ origin: "*", credentials: true }))
 app.use(urlencoded({ extended: true }))
 app.use(cookieParser())
 
