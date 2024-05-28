@@ -26,7 +26,7 @@ export default function Home() {
 
   return (
     <>
-      <nav className="absolute w-full top-0 h-14 flex px-10 justify-between items-center">
+      <nav className="absolute w-full top-0 h-14 flex px-10 justify-start items-center">
         <p className="text-2xl">Rentify</p>
         <div className="flex gap-x-5">
           <Link href="/login">  <span>Login</span></Link>
@@ -35,8 +35,16 @@ export default function Home() {
       </nav>
       <main className="flex min-h-screen flex-col items-center justify-between p-24">
         <h1 className="text-xl">Home Page</h1>
-        <div>
-        </div>
+     <div className="flex justify-center flex-col items-start pl-20 h-[300px] w-[400px] text-white bg-black rounded-lg">
+<p><strong>Name</strong> : Uthrathithan M</p>
+<ul>
+<p><strong>Github Link</strong></p>
+<li><strong>&nbsp; &nbsp; Client repository</strong>: <a href="https://github.com/UTHRATHITHAN/Presidio_Assignment">Repo Link</a></li>
+<li><strong>&nbsp; &nbsp; Backend repository</strong>:  <a href="https://github.com/UTHRATHITHAN/Presidio_Backend_Assignment">Repo Link</a> </li>
+</ul>
+<p><strong>Linkedin</strong> : <a href="www.linkedin.com/in/uthrathithan">Link for Linkedin profile</a> </p>
+<p><strong>Mail</strong> : m.uthrathithan@gmail.com</p>
+</div>
       </main>
     </>
   );
