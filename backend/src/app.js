@@ -212,7 +212,9 @@ app.get("/allproperties", async (req, res) => {
 })
 
 app.get("/logout", (req, res) => {
-    res.clearCookie("Token", { domain: "localhost", path: "/" });
+    // res.clearCookie("Token", { sameSite:"none", secure:true });
+    res.clearCookie("Token");
+
     res.end()
 })
 

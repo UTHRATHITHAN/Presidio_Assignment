@@ -3,6 +3,8 @@
 const nextConfig = {
     env: {
         NEXT_PUBLIC_BACKEND_URL: "https://presidiobackendassignment-production.up.railway.app"
+        // NEXT_PUBLIC_BACKEND_URL: "http://localhost:8000"
+
     },
     async headers() {
         return [
