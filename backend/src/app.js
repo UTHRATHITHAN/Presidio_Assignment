@@ -102,7 +102,6 @@ app.post('/login', async (req, res) => {
 })
 
 app.get("/", verifyToken, (req, res) => {
-    console.log("Its working");
     res.json({
         status: "failure",
         message: "Session Expired, Please Login",
@@ -111,8 +110,6 @@ app.get("/", verifyToken, (req, res) => {
 })
 
 app.get("/info", (req, res) => {
-    console.log("Its working");
-
     res.json({
         info: "API is live"
     })

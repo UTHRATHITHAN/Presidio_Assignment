@@ -17,9 +17,8 @@ export default function Home() {
       });
       const data = resData.data;
       addUser(data.data)
-      if (data.status !== "failure"){  
-        router.push('/dashboard')
-    }
+      if (data.status !== "failure")  router.push('/dashboard')
+    
       
     }
     fetch()
