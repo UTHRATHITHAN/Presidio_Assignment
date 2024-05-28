@@ -42,7 +42,7 @@ export default function Home() {
 <li><strong>&nbsp; &nbsp; Client repository</strong>: <a href="https://github.com/UTHRATHITHAN/Presidio_Assignment">Repo Link</a></li>
 <li><strong>&nbsp; &nbsp; Backend repository</strong>:  <a href="https://github.com/UTHRATHITHAN/Presidio_Backend_Assignment">Repo Link</a> </li>
 </ul>
-<p><strong>Linkedin</strong> : <a href="www.linkedin.com/in/uthrathithan">Link for Linkedin profile</a> </p>
+<p><strong>Linkedin</strong> : <a href="https://www.linkedin.com/in/uthrathithan/">Link for Linkedin profile</a> </p>
 <p><strong>Mail</strong> : m.uthrathithan@gmail.com</p>
 </div>
       </main>
