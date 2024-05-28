@@ -33,7 +33,7 @@ export default function Home() {
           <Link href="/register">  <span>Register</span></Link>
         </div>
       </nav>
-      <main className="flex min-h-screen flex-col items-center justify-between p-24">
+      <main className="flex min-h-screen flex-col items-center justify-start p-24">
         <h1 className="text-xl">Home Page</h1>
      <div className="flex justify-center flex-col items-start pl-20 h-[300px] w-[400px] text-white bg-black rounded-lg">
 <p><strong>Name</strong> : Uthrathithan M</p>
