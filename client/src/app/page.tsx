@@ -26,7 +26,7 @@ export default function Home() {
 
   return (
     <>
-      <nav className="absolute w-full top-0 h-14 flex px-10 justify-start items-center">
+      <nav className="absolute w-full top-0 h-14 flex px-10 justify-between items-center">
         <p className="text-2xl">Rentify</p>
         <div className="flex gap-x-5">
           <Link href="/login">  <span>Login</span></Link>
